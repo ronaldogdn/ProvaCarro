@@ -1,6 +1,6 @@
-# ProvaCarro
-##execução Front
-npm start ou ng serve -o
+### ProvaCarro
+## execução Front
+- npm start ou ng serve -o
 
-##execução Back
-npm run dev
+## execução Back
+- npm run dev
