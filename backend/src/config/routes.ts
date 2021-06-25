@@ -10,7 +10,7 @@ router.post("/carro/cadastrar",carroController.cadastrar);
 router.get("/carro/buscar/:placa",carroController.buscarPlaca);
 router.get("/carro/listar",carroController.listar);
 router.post("/carro/alterar",carroController.alterar);
-router.get("/carro/remover/:placa",carroController.remover);
+router.get("/carro/remover/:id",carroController.remover);
 
 
 

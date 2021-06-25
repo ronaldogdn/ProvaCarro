@@ -32,11 +32,12 @@ class CarroController{
     async listar(request: Request, response:Response){
         try{
             const carros = await CarroSchema.find();
-            response.status(200).json({
-                data: carros,
-                error:false,
-                msg:"Lista de carros atualizada!"
-            });
+            response.status(200).json(carros);
+            // response.status(200).json({
+            //     data: carros,
+            //     error:false,
+            //     msg:"Lista de carros atualizada!"
+            // });
         }catch(error){
             response.status(404).json({
                 data: error,
@@ -63,8 +64,8 @@ class CarroController{
 
     async remover(request: Request, response: Response){
         try {
-            const { placa } = request.params;
-            const carro = await CarroSchema.findOneAndDelete({ placa:placa});
+            const { id } = request.params;
+            const carro = await CarroSchema.findOneAndDelete({ _id:id});
 
             if (carro != null) {
               response.status(200).json({ data: carro, error: false, msg: "Carro apagado!" });
